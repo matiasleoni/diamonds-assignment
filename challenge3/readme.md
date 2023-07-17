@@ -4,7 +4,7 @@
 
 For this challenge I created two python scripts.
 
-1. The first one, `pipeline_training.py`, reads the csv file `diamonds.csv`, processes the columns "carat", "color" and "clarity" and then trains the model against the ground truth given in the column "price". These transformations and model training are encoded in an object of the `sklearn.pipeline.Pipeline()` class and after training the `Pipeline()` object is saved in the `my_pipeline.joblib` file.
+1. The first one, `pipeline_training.py`, reads the csv file `diamonds.csv`, processes the columns "carat", "color" and "clarity" and then trains the model against the ground truth given in the column "price". These transformations and model training are encoded in an object of the `sklearn.pipeline.Pipeline()` class and, after training, the `Pipeline()` object is saved in the `my_pipeline.joblib` file.
 
 2. The second one, `diamond_pricing.py`, is an I/O python script which asks the features of a given diamond and returns the estimated price by using the `Pipeline()` object loaded from the `my_pipeline.joblib` file.
 
