@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+#Environments Matias
+/challenge3/Include
+/challenge3/Lib
+/challenge3/pyenv.cfg
+/challenge3/Scripts
