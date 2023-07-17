@@ -16,12 +16,10 @@ import os
 data = pd.read_csv("diamonds.csv")
 data = data[['carat', 'color', 'clarity', 'price']]
 data = data[(data['carat']>0) & (data['price']>0)].reset_index(drop= True)
-print(data.tail())
 
-cath_columns = list(data.select_dtypes(include=[object]).columns)
-print(cath_columns)
-num_columns = list(data.select_dtypes(exclude=[object]).columns)
-print(num_columns)
+
+#cath_columns = list(data.select_dtypes(include=[object]).columns)
+#num_columns = list(data.select_dtypes(exclude=[object]).columns)
 
 cath_preprocessor = OneHotEncoder()
 num_preprocessor = FunctionTransformer(func = np.log, inverse_func = np.exp)#, feature_names_out = lambda x,y:(x,y))
@@ -30,12 +28,11 @@ regressor = LinearRegression()
 preprocessor = ColumnTransformer(
     transformers=[
         ('num_preprocessor', num_preprocessor, ['carat']),
-        ('cath_preprocessor', cath_preprocessor, cath_columns)
+        ('cath_preprocessor', cath_preprocessor, ['color', 'clarity'])
     ])
-
 my_pipe = Pipeline([('transformaciones', preprocessor),('regresion', regressor)])
 
-#print(my_pipe)
+
 
 X = data.drop(['price'], axis = 1)
 y = np.log(data['price'])
@@ -44,11 +41,9 @@ my_pipe.fit(X,y)
 
 
 
-#print(regressor.coef_)
 
 if(os.name == 'posix'):
    os.system('clear')
-# else screen will be cleared for windows
 else:
    os.system('cls')
 
