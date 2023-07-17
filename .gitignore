@@ -131,5 +131,5 @@ dmypy.json
 #Environments Matias
 /challenge3/Include
 /challenge3/Lib
-/challenge3/pyenv.cfg
+/challenge3/pyvenv.cfg
 /challenge3/Scripts
