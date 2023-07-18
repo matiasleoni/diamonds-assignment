@@ -51,6 +51,8 @@ data = pd.DataFrame([[a_carat, a_color.upper(), a_clarity.upper()]], columns = [
 
 a_price = np.exp(my_pipe.predict(data)[0])
 
+to_format = (a_carat, a_color.upper(), a_clarity.upper(), a_price)
+
 print('--------------------------------------------------------------------------------------------------')
 print("The estimation for the value of a diamond with") 
-print("{0} carats, {1} color and {2} clarity is ${3:,.2f}".format(a_carat, a_color.upper(), a_clarity.upper(), a_price))
+print("{0} carats, {1} color and {2} clarity is ${3:,.2f}".format(*to_format))

@@ -12,8 +12,12 @@ from joblib import dump
 
 import os
 
+current_dir = os.path.dirname(os.path.abspath(__file__))
+parent_dir = os.path.dirname(current_dir)
+relative_path = os.path.join('datasets', 'diamonds','diamonds.csv')
+absolute_path = os.path.join(parent_dir, relative_path)
 
-data = pd.read_csv("diamonds.csv")
+data = pd.read_csv(absolute_path)
 data = data[['carat', 'color', 'clarity', 'price']]
 data = data[(data['carat']>0) & (data['price']>0)].reset_index(drop= True)
 
