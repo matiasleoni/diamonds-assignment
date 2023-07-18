@@ -129,6 +129,14 @@ dmypy.json
 .pyre/
 
 #Environments Matias
+/challenge1/Include
+/challenge1/Lib
+/challenge1/pyvenv.cfg
+/challenge1/Scripts
+/challenge2/Include
+/challenge2/Lib
+/challenge2/pyvenv.cfg
+/challenge2/Scripts
 /challenge3/Include
 /challenge3/Lib
 /challenge3/pyvenv.cfg
