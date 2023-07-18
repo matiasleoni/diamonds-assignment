@@ -1,0 +1,23 @@
+<html>
+<body>
+<h2>Hey User!</h2>
+<p>For the API technical documentation visit /docs. </p>
+<p>You can use the API /pricing feature by selecting carat, 
+color and clarity of the diamond in the html address itself. </p>
+<p>The API works with a GET request with URL parameters following the structure /pricing/{carat}/{color}/{clarity} </p>
+<p>For example if you want to price a 2.5 carat diamond with color "F"
+and clarity "VS1" you should request the address</p>
+<blockquote>
+/pricing/2.5/F/VS1 &nbsp  <a href="/pricing/2.5/F/VS1">(Click her to try)</a></li>
+</blockquote>
+<p> and you will get the estimated price of the diamond. The API will respond with a JSON of the form:</p>
+<blockquote>
+{"Carat":2.5,"Color":"F","Clarity":"VS1","Price":33980.43123071548}</li>
+</blockquote>
+<p> The value for the {carat} parameter should be a number. </p>
+<p> For {color}, it should be a letter from D to J.</p>
+<p> For clarity, one of the cathegories:  "I1", "IF", "SI1", "SI2", "VS1", "VS2", "VVS1", "VVS2".
+</p>
+<a href = "mailto: matiasleoni@gmail.com">Admin Mail</a>
+</body>
+</html>
