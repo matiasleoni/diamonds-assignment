@@ -133,3 +133,8 @@ dmypy.json
 /challenge3/Lib
 /challenge3/pyvenv.cfg
 /challenge3/Scripts
+/challenge4/Include
+/challenge4/Lib
+/challenge4/pyvenv.cfg
+/challenge4/Scripts
+/challenge4/src_local
