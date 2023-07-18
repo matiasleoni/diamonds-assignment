@@ -133,6 +133,7 @@ dmypy.json
 /challenge1/Lib
 /challenge1/pyvenv.cfg
 /challenge1/Scripts
+/challenge1/share
 /challenge2/Include
 /challenge2/Lib
 /challenge2/pyvenv.cfg
@@ -145,4 +146,3 @@ dmypy.json
 /challenge4/Lib
 /challenge4/pyvenv.cfg
 /challenge4/Scripts
-#/challenge4/src_local
