@@ -1,8 +1,8 @@
 # Challenge 3
 
-> "Francesco likes your model! Now he wants to use it. To improve the model, Francesco is open to hire a new expert and let him value more stones. Create an automatic pipeline capable of training a new instance of your model from the raw dataset."
+> "Francesco likes your model! Now he wants to use it. To improve the model, Francesco is open to hire a new expert and let him value more stones. **Create an automatic pipeline capable of training a new instance of your model from the raw dataset**. "
 
-For this challenge I created two python scripts.
+For this challenge we created two python scripts.
 
 1. The first one, `pipeline_training.py`, reads the csv file `diamonds.csv`, processes the columns "carat", "color" and "clarity" and then trains the model against the ground truth given in the column "price". These transformations and model training are encoded in an object of the `sklearn.pipeline.Pipeline()` class and, after training, the `Pipeline()` object is saved in the `my_pipeline.joblib` file.
 

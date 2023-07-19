@@ -163,5 +163,30 @@ Now they want to embed your model in a web application.
 
 ---
 
-## How to run
-Please fill this section as part of the assignment.
+## How to run - Diamonds
+
+### Challenge 1
+
+In `challenge1` folder the jupyter notebook `main.ipynb` can be found addressing the challenge. It runs in a virtual environment with `requirements.txt` installed (one can alternatively run it in google colab by correctly pointing the text files the notebook reads).
+
+### Challenge 2
+
+In `challenge2` folder the jupyter notebook `main.ipynb` can be found addressing the challenge. It runs in a virtual environment with `requirements.txt` installed (one can alternatively run it in google colab by correctly pointing the text files the notebook reads).
+
+### Challenge 3
+
+The solution to this challenge can be found in `challenge3` folder. For it we created two python scripts.
+
+1. The first one, `pipeline_training.py`, reads the csv file `diamonds.csv`, processes the columns "carat", "color" and "clarity" and then trains the model against the ground truth given in the column "price". These transformations and model training are encoded in an object of the `sklearn.pipeline.Pipeline()` class and, after training, the `Pipeline()` object is saved in the `my_pipeline.joblib` file.
+
+2. The second one, `diamond_pricing.py`, is an I/O python script which asks the features of a given diamond and returns the estimated price by using the `Pipeline()` object loaded from the `my_pipeline.joblib` file.
+
+Besides those files, there is the `requirements.txt` which lists the libraries needed for these scripts.
+
+It should be said, regarding the training of the model, that since Francesco and its clients needed a sufficiently simple model to be able to grasp its working, we chose a model which has an algorithm which cannot learn incrementally. This means that if the expert hired by Francesco values additional diamonds, the model has to be retrained with the combination of old and new data (this can be done by simply appending the new data in the `diamonds.csv` file).
+
+### Challenge 4
+
+For this challenge we have developed an API and deployed it in a dockerized ECS instance of AWS cloud. It can be found in <http://18.234.46.13/>. The API works with a GET request with URL parameters following the structure `http://18.234.46.13/pricing/{carat}/{color}/{clarity}` which responds with a JSON with the features and the price computed from the model developed in the previous challenges. A simple documentation can be found in the root <http://18.234.46.13/> while a more technical one in <http://18.234.46.13/docs>.
+
+In the `challenge4` directory we have the folder `src` with the Dockerfile and the API code that can be found togheter with the PIP `requirements.txt` libraries to be installed on top of a `python:3.9-slim-bullseye` system. The `src_local` folder on the other hand, contains the code used to develop de API locally before cloud deployment. The API uses the object of the scikit-learn class `Pipeline()` that was constructed, trained and saved in the file `my_pipeline.joblib` in the previous challenges.
