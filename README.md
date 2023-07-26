@@ -167,7 +167,7 @@ Now they want to embed your model in a web application.
 
 ### Challenge 1
 
-In `challenge1` folder the jupyter notebook `main.ipynb` can be found addressing the challenge. It runs in a virtual environment with `requirements.txt` installed (one can alternatively run it in google colab by correctly pointing the text files the notebook reads).
+In `challenge1` folder the jupyter notebook `main.ipynb` can be found addressing the challenge. It runs in a virtual environment with `requirements.txt` installed (one can alternatively run it in google colab by correctly pointing the text files the notebook reads). In the `figs` folder a plot is saved for future use.
 
 ### Challenge 2
 
