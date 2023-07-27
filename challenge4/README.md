@@ -8,5 +8,5 @@ The API uses the object of the scikit-learn class `Pipeline()` that was construc
 
 The contents of this directory:
 * Folder `src` has the Dockerfile and the API code that can be found togheter with the PIP `requirements.txt` libraries to be installed on top of a `python:3.9-slim-bullseye` system. This is all the code deployed in the AWS ECS instance. 
-* The `src_local` folder on the other hand, contains the code used to develop the API in a local Docker container before cloud deployment. 
+* The `src_local` folder on the other hand, contains the code used to develop the API in a local Docker container before cloud deployment. In it, another [README.md](src_local/README.md) file can be found explaining its use.
 * The file `API_testing.py` is a script to make some tests of the API responses and the `requirements.txt` found in this folder contains the libraries needed for this testing to work.
