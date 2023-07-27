@@ -147,3 +147,4 @@ dmypy.json
 /challenge4/Lib
 /challenge4/pyvenv.cfg
 /challenge4/Scripts
+/challenge4/src/fastapi.md
