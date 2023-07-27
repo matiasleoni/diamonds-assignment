@@ -19,7 +19,10 @@ while True:
   a_carat = input('Introduce Carat of the Diamond (should be a number > 0) and press enter:')
   try:
     a_carat = float(a_carat)
-    break
+    if a_carat > 0:
+      break
+    else:
+      print('You must introduce a positive number. Please try again.')
   except ValueError:
     print('You must introduce a number. Please try again.')
     pass
